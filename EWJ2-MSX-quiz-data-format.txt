@@ -1,0 +1,49 @@
+EARTHWORM JIM 2 - SEGA GENESIS - QUIZ DATA FORMAT
+
+Location in Rom: 2704DA - 27265C (Hex)
+Lenght: 8578 (Dec)
+
+QUIZ DATA [Lenght = 8286 (Dec)]
+73 *
+{
+	Question [Lenght: Varies]
+	{ 
+	1 Byte = Right Proposition (15 / 16 / 17)
+	3 Bytes = 07 01 XX (Start - XX = Position) *
+	x Bytes =  Question
+	{3 bytes = 07 01 XX (Line Break - XX = Position (Min = 03) )
+	}
+
+	3 Bytes = 07 07
+
+	Proposition [Lenght = Varies]
+	3 * 
+	{
+	2 Bytes = 07 07
+	1 Byte = 01
+	1 Byte = Position
+	1 Byte = Button Sprites (18 = A , 19 = B, 1A = C)
+	x Bytes = Proposition
+	{3 bytes = 07 01 XX (Line Break - XX =Position)}
+	}
+
+1 Byte: 00 (End)
+}
+
+FOOTER DATA [Lenght = 292 (Dec)]
+73 *
+{
+	4 Bytes = Pointer of the Question in the Rom (Little Endian)
+}
+
+==============================================================
+
+* Note: Some questions start with one or two "20" but to be general, I will use the 07 01 XX.
+
+Quistion-Proposition lenght average is 113 bytes (8286 divided by 73)
+Quiz Data can be shortened but has to be filled to get the same lenght
+
+The recommanded Question Lenght is between 28 - 30 characters lenght
+The recommanded Proposition Lenght is between 14 - 18 characters lenght (14 If you won't to over lay with the quiz machine)
+
+Max Lines used is 15 (Based on "Does Jim's mother approves of the girls he dates?")
