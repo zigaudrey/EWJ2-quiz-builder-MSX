@@ -6,11 +6,13 @@ A Python program that create a new quiz data for Earthworm Jim 2 Sega Genesis Ro
 
 ## Step
 
-1. **Edit the EWJ2-quiz-template file**. Create a new file if you mess up.
+1. **Edit the EWJ2-quiz-template file**. Create a new file in case you mess up.
+
 Line break with **%** and **the number after the question is the right proposition**.
-2. Run the **Python script** and choose the txt file to create a bin data.
-3. Optionally, **you can choose an EWJ2 rom file to insert new data**.
-4. **Two bin files will be created**. Use [SegaGenesisMegaDriveRomAnalyzer](https://www.romhacking.net/utilities/1344/) to fix checksum.
+
+3. Run the **Python script** and choose the txt file to create a bin data.
+4. Optionally, **you can choose an EWJ2 rom file to insert new data**.
+5. **Two bin files will be created**. Use [SegaGenesisMegaDriveRomAnalyzer](https://www.romhacking.net/utilities/1344/) to fix checksum.
 
 ## Result
 ![Earthworm Jim 2 - Quiz Mod - Screenshot](https://github.com/zigaudrey/EWJ2-quiz-builder-MSX/assets/129554573/00c12260-6b72-4087-9be0-232cb6711963)
