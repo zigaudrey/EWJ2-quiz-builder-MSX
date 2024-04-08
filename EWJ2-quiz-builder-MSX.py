@@ -63,8 +63,16 @@ if len(txt_file) != 0:
                     xl += 1
                 else:
                     new_line += bytes(quiz_data[n][x].upper().encode("utf-8"))
-            
-            new_line += b'\x07'
+
+            per_count = 0
+
+            for y in range (0,5):
+                per_count += quiz_data[n + y].count("%")
+
+            if per_count <= 1:
+                new_line += b'\x07\x07'
+            else:
+                new_line += b'\x07'
 
             button_num = 1
 
