@@ -17,4 +17,4 @@ Line break with **%** and **the number after the question is the right propositi
 ## Result
 ![Earthworm Jim 2 - Quiz Mod - Screenshot](https://github.com/zigaudrey/EWJ2-quiz-builder-MSX/assets/129554573/00c12260-6b72-4087-9be0-232cb6711963)
 
-![Earthworm Jim 2 - Quiz Mod - Screenshot 2](https://github.com/zigaudrey/EWJ2-quiz-builder-MSX/assets/129554573/9b9fa971-4542-4c51-b105-04bcec36b1ed)
+![Earthworm Jim 2 - Quiz Mod - Screenshot 2 V2](https://github.com/zigaudrey/EWJ2-quiz-builder-MSX/assets/129554573/63b8593d-da41-4fe9-b945-0c1125356b20)
