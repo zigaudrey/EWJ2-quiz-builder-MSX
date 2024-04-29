@@ -31,7 +31,7 @@ if len(txt_file) != 0:
         footer_pointer = [1242]
         footer_bin = bytearray()
 
-        button_bit = [b'\x01\x0A\x18', b'\x01\x0A\x19', b'\x01\x0A\x1A']
+        button_bit = [b'\x18', b'\x19', b'\x1A']
 
         for n in range (0, len(quiz_data)-1):
             quiz_data[n] = quiz_data[n][:-1]
@@ -76,11 +76,23 @@ if len(txt_file) != 0:
 
             button_num = 1
 
+            prop_len = 0
+            for y in range (3,5):
+                for z in range(len(quiz_data[n + y])):
+                    prop_len += 1
+
+            space_opt = 1
+            if prop_len > 3:
+                space_opt = 1
+            else:
+                space_opt = 5
+
             while button_num < 4:
-                new_line += b'\x07\x07' + button_bit[button_num - 1]
+                new_line += b'\x07\x07\x01' + struct.pack("B", 9 + space_opt) + button_bit[button_num - 1]
                 for x in range(0,len(quiz_data[n+button_num+1])):
                     if quiz_data[n+button_num+1][x] == "%":
-                        new_line += b'\x07\x01\x0B'
+                        new_line += b'\x07\x01'  + struct.pack("B", 10 + space_opt)
+                        
                     else:
                         new_line += bytes(quiz_data[n+button_num+1][x].upper().encode("utf-8"))
 
