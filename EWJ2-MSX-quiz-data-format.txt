@@ -40,10 +40,10 @@ FOOTER DATA [Lenght = 292 (Dec)]
 
 * Note: Some questions start with one or two "20" but to be general, I will use the 07 01 XX.
 
-Quistion-Proposition lenght average is 113 bytes (8286 divided by 73)
+Question-Proposition lenght average is 113 bytes (8286 divided by 73)
 Quiz Data can be shortened but has to be filled to get the same lenght
 
-The recommanded Question Lenght is between 28 - 30 characters lenght
-The recommanded Proposition Lenght is between 14 - 18 characters lenght (14 If you won't to over lay with the quiz machine)
+The recommanded Question Lenght for each line is between 28 - 30 characters
+The recommanded Proposition Lenght for each line is between 14 - 18 characters (14 If you won't to over lay with the quiz machine)
 
 Max Lines used is 15 (Based on "Does Jim's mother approves of the girls he dates?")
