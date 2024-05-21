@@ -12,8 +12,11 @@ if len(txt_file) != 0:
     quiz_data= txt_open.readlines()
     txt_open.close()
 
-    i=len(txt_file)- 5
+    i=len(txt_file)- 1
     short_name_file = ""
+    while i!= 0 and txt_file[i] != '.':
+        i -= 1
+    i -= 1
     while i!= 0 and txt_file[i] != '/':
         short_name_file = txt_file[i] + short_name_file
         i -= 1
