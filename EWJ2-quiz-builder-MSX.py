@@ -40,10 +40,19 @@ if len(txt_file) != 0:
             quiz_data[n] = quiz_data[n][:-1]
 
         for n in range(0, len(quiz_data), 5):
-            
+
             new_line = bytearray()
             new_line += struct.pack("B", 20 + int(quiz_data[n+1]))
-            new_line += b'\x07\x01'
+            
+            per_count = 0
+
+            for y in range (0,5):
+                per_count += quiz_data[n + y].count("%")
+
+            if per_count < 8 :
+                new_line += b'\x07'
+                        
+            new_line += b'\x01'
 
             len_list = []
             
@@ -67,11 +76,6 @@ if len(txt_file) != 0:
                 else:
                     new_line += bytes(quiz_data[n][x].upper().encode("utf-8"))
 
-            per_count = 0
-
-            for y in range (0,5):
-                per_count += quiz_data[n + y].count("%")
-
             if per_count <= 1:
                 new_line += b'\x07\x07'
             else:
@@ -94,7 +98,7 @@ if len(txt_file) != 0:
                 new_line += b'\x07\x07\x01' + struct.pack("B", 9 + space_opt) + button_bit[button_num - 1]
                 for x in range(0,len(quiz_data[n+button_num+1])):
                     if quiz_data[n+button_num+1][x] == "%":
-                        new_line += b'\x07\x01'  + struct.pack("B", 10 + space_opt)
+                        new_line += b'\x07\x01\x0B'
                         
                     else:
                         new_line += bytes(quiz_data[n+button_num+1][x].upper().encode("utf-8"))
