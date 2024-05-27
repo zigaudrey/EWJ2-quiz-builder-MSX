@@ -9,7 +9,8 @@ QUIZ DATA [Lenght = 8286 (Dec)]
 	Question [Lenght: Varies]
 	{ 
 	1 Byte = Right Proposition (15 / 16 / 17)
-	3 Bytes = 07 01 XX (Start - XX = Position) *
+	0-2 Bytes = 07 (Linebreak)
+	2 Bytes = 01 XX (Start - XX = Position) *
 	x Bytes =  Question
 	{3 bytes = 07 01 XX (Line Break - XX = Position (Min = 03) )
 	}
