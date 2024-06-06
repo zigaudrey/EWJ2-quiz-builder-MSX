@@ -18,3 +18,6 @@ Line break with **%** and **the number after the question is the right propositi
 ![Earthworm Jim 2 - Quiz Mod - Screenshot](https://github.com/zigaudrey/EWJ2-quiz-builder-MSX/assets/129554573/00c12260-6b72-4087-9be0-232cb6711963)
 
 ![Earthworm Jim 2 - Quiz Mod - Screenshot 2 V2](https://github.com/zigaudrey/EWJ2-quiz-builder-MSX/assets/129554573/63b8593d-da41-4fe9-b945-0c1125356b20)
+
+## Link
+[EWJ2-quiz-builder-SNES](https://github.com/zigaudrey/EWJ2-quiz-builder-SNES)
